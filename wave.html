@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8" />
+   <style>
+      .viz {
+         text-align: center;
+      }
+   </style>
+</head>
+
+<body>
+
+   <div class="viz">
+      <canvas id="output" height="500" width="500"></canvas>
+
+      <div>
+         <audio controls id="audio" crossorigin="anonymous" src="http://moode:8000" />
+      </div>
+
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.iife.js"></script>
+   <script>
+      let wave = new Wave();
+      wave.fromElement("audio", "output", { type: "flower" });
+   </script>
+</body>
+
+</html>
